@@ -1,0 +1,43 @@
+.game-room {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.arena-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.players {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.player {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 80px;
+  transition: left 0.1s linear;
+}
+
+.player.left {
+  left: 100px;
+  transform: scaleX(1);
+}
+
+.player.right {
+  right: 100px;
+  transform: scaleX(-1);
+}

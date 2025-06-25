@@ -1,0 +1,47 @@
+.hud {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 3;
+}
+
+.health-bar {
+  width: 40%;
+}
+
+.label {
+  color: yellow;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.bar {
+  width: 100%;
+  height: 14px;
+  background: #444;
+  border: 2px solid #222;
+  box-shadow: 0 0 4px #000;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: limegreen;
+  transition: width 0.2s ease;
+}
+
+.winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: #000a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  z-index: 5;
+}

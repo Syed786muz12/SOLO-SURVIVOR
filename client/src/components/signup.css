@@ -1,0 +1,347 @@
+:root {
+    --primary: #6c5ce7;
+    --secondary: #a29bfe;
+    --accent: #00cec9;
+    --dark: #0f0c29;
+    --darker: #090721;
+    --light: #f7f7f7;
+    --success: #00b894;
+    --feature-bg: rgba(92, 70, 156, 0.2);
+  }
+  
+  .game-signup-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--darker), var(--dark));
+    overflow: hidden;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+  }
+  
+  .signup-card {
+    background: rgba(15, 12, 41, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    z-index: 10;
+    border: 1px solid rgba(92, 70, 156, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    animation-duration: 0.8s;
+    margin-bottom: 2rem;
+  }
+  
+  .game-logo {
+    text-align: center;
+    margin-bottom: 2rem !important;
+  }
+  
+  .logo-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.6);
+    animation-duration: 2s;
+  }
+  
+  .brand-name {
+    color: var(--light);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(162, 155, 254, 0.7);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tagline {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  
+  .input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .input-group-text {
+    background: rgba(108, 92, 231, 0.2);
+    border: none;
+    color: var(--secondary);
+    min-width: 45px;
+    justify-content: center;
+  }
+  
+  .form-control {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    color: white;
+    padding: 15px;
+    transition: all 0.3s ease;
+    height: 50px;
+  }
+  
+  .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.3);
+    color: white;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .form-check-input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--secondary);
+  }
+  
+  .form-check-input:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .form-check-label {
+    color: var(--secondary);
+    font-size: 0.9rem;
+  }
+  
+  .signup-btn {
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    border: none;
+    padding: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+  }
+  
+  .signup-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(108, 92, 231, 0.4);
+  }
+  
+  .signup-btn:active {
+    transform: translateY(0);
+  }
+  
+  .signup-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  
+  .signup-btn:hover::after {
+    transform: translateX(0);
+  }
+  
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(108, 92, 231, 0.4);
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    color: var(--secondary);
+    margin: 1.5rem 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(162, 155, 254, 0.3);
+  }
+  
+  .divider::before {
+    margin-right: 1rem;
+  }
+  
+  .divider::after {
+    margin-left: 1rem;
+  }
+  
+  .highlight-link {
+    color: var(--accent);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .highlight-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+  
+  .highlight-link:hover {
+    color: white;
+  }
+  
+  .highlight-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Floating particles animation */
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .particle {
+    position: absolute;
+    background: var(--color);
+    border-radius: 50%;
+    animation: float var(--duration) linear infinite;
+    animation-delay: var(--delay);
+    width: var(--size);
+    height: var(--size);
+    top: var(--y);
+    left: var(--x);
+    box-shadow: 0 0 10px currentColor;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Input animation */
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(108, 92, 231, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(108, 92, 231, 0); }
+  }
+  
+  /* Features section */
+  .features-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin-top: 1rem;
+    z-index: 10;
+  }
+  
+  .feature-card {
+    background: var(--feature-bg);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 220px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(92, 70, 156, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
+  }
+  
+  .feature-card h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .feature-card p {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .signup-card {
+      padding: 1.8rem;
+    }
+    
+    .features-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .brand-name {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .game-signup-container {
+      padding: 1rem;
+    }
+    
+    .signup-card {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .logo-icon {
+      width: 70px;
+      height: 70px;
+      font-size: 2rem;
+    }
+  }

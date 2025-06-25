@@ -1,0 +1,57 @@
+/* src/components/dashboard/spectator.css */
+.spectator-mode {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.spectator-hud {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-info {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.player-info h3 {
+  margin: 0 0 5px 0;
+  color: #fff;
+}
+
+.spectator-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.control-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.control-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.exit-button {
+  background: rgba(239, 68, 68, 0.7);
+}
+
+.exit-button:hover {
+  background: rgba(239, 68, 68, 0.9);
+}
